@@ -9,7 +9,7 @@ ENV REDIS_VERSION 3.0.2
 ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-3.0.2.tar.gz
 ENV REDIS_DOWNLOAD_SHA1 a38755fe9a669896f7c5d8cd3ebbf76d59712002
 
-RUN buildDeps='gcc libc6-dev make'; \
+RUN buildDeps='gcc libc6-dev make tar'; \
     set -x \
     && yum install -y $buildDeps \
     && yum clean -y all && rm -rf /var/cache/yum/* \
