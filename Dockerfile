@@ -11,7 +11,7 @@ ENV REDIS_DOWNLOAD_SHA1 a38755fe9a669896f7c5d8cd3ebbf76d59712002
 
 RUN buildDeps='gcc libc6-dev make'; \
     set -x \
-    && yum install -y $buildDeps --no-install-recommends \
+    && yum install -y $buildDeps \
     && yum clean -y all && rm -rf /var/cache/yum/* \
     && mkdir -p /usr/src/redis \
     && curl -sSL "$REDIS_DOWNLOAD_URL" -o redis.tar.gz \
