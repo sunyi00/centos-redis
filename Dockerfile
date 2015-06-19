@@ -23,4 +23,5 @@ VOLUME /redis
 WORKDIR /redis
 
 EXPOSE 6379
+EXPOSE 16379
 CMD [ "redis-server" ]
